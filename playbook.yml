@@ -3,11 +3,7 @@
   remote_user: vagrant
   vars:
     vnc_pass: foobar
-  environment:
-    NO_AT_BRIDGE: 1
   tasks:
-    - name: foo
-      shell: echo export NO_AT_BRIDE=1 >> ~/.bashrc
     - name: install xfce4
       apt: name=xfce4 update_cache=yes
       sudo: yes
