@@ -22,11 +22,13 @@
       shell: echo {{vnc_pass}} |vncpasswd -f > ~/.vnc/passwd
     - name: user
       file: path=~/.vnc/passwd mode=0600
-    - name: z
-      shell: vncserver :1 && vncserver -kill :1
-    - name: a
-      shell: echo exec startxfce4  >> ~/.vnc/xstartup 
-    - name: a
-      shell: pwd
-    - name: up
-      shell: vncserver -geometry 1440x900 -alwaysshared -dpi 96 -localhost :1
+  #    - name: z
+  #    shell: vncserver :1
+  #  - name: down
+  #    shell: vncserver -kill :1
+  #  - name: a
+  #    shell: echo exec startxfce4  >> ~/.vnc/xstartup 
+  #  - name: a
+  #    shell: pwd
+  #  - name: up
+  #    shell: vncserver -geometry 1440x900 -alwaysshared -dpi 96 -localhost :1
